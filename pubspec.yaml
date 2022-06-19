@@ -1,0 +1,33 @@
+name: flutter_korea_game
+description: A new Flutter project.
+
+publish_to: 'none' 
+
+version: 1.0.0+1
+
+environment:
+  sdk: ">=2.17.3 <3.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  flame: 
+    git:
+      url: https://github.com/flame-engine/flame
+      ref: main
+      path: packages/flame
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+    
+dependency_overrides:
+  flutter_gen: ^4.3.0
+  build_runner:
+
+  flutter_lints: ^2.0.0
+
+flutter:
+  uses-material-design: true
+  assets:
+    - assets/images/
