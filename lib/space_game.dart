@@ -17,9 +17,10 @@ class SpaceGame extends FlameGame
   Future<void>? onLoad() async {
     await loadSprites();
 
-    final myShip = ShipComponent();
-    final scoreComponent = ScoreComponent();
-    addAll([myShip, scoreComponent, MadeByComponent()]);
+    final myShip = ShipComponent(),
+        scoreComponent = ScoreComponent(),
+        madeByComponent = MadeByComponent();
+    addAll([myShip, scoreComponent, madeByComponent]);
 
     children.register<ScoreComponent>();
 

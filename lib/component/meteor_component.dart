@@ -17,7 +17,7 @@ class MeteorComponent extends SpriteComponent with HasGameRef<SpaceGame> {
   @override
   Future<void>? onLoad() async {
     sprite = Sprite(gameRef.images.fromCache(Assets.images.meteor.path));
-    position = Vector2(Random().nextDouble() * gameRef.size.x, 100);
+    position = Vector2(Random().nextDouble() * gameRef.size.x, 0);
     size = Vector2.all(88 * Random().nextDouble());
     add(
       CircleHitbox.relative(0.9, parentSize: size)
@@ -30,7 +30,7 @@ class MeteorComponent extends SpriteComponent with HasGameRef<SpaceGame> {
   @override
   void update(double dt) {
     angle += rotationalSpeed;
-    position.y += 5;
+    position.y += 10 * speed + 3;
     if (position.y > gameRef.size.y) {
       removeFromParent();
 
