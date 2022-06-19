@@ -9,3 +9,11 @@
 
 ### 사용된 Overlay
 - game_over: 게임 종료 화면
+
+
+### Build
+- scripts/build.sh
+
+### Deploy
+- scripts/deploy.sh
+
